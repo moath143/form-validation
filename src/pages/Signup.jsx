@@ -15,9 +15,6 @@ const Signup = () => {
     const { control, handleSubmit, formState: { errors }  } = useForm({
         resolver: yupResolver(registerValidationSchema)
     });
-    const handleClick = () => {
-        enqueueSnackbar('I love hooks');
-    };
 
 
     const onSubmit = (data) => {
@@ -69,7 +66,7 @@ const Signup = () => {
                     </FormControl>
                     {errors.confirmPassword && <Alert severity="error">{errors.confirmPassword.message}</Alert>}
                     {/*{errors.confirmPassword && enqueueSnackbar(errors.confirmPassword.message, { variant: 'error' })}*/}
-                    <ButtonSignup onClick={handleClick} sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
+                    <ButtonSignup  sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
                 </Form>
                 <Typography sx={{fontSize: '16px', fontWeight: '700', marginTop: '10px'}} >Already have an account? <LinkAnchor to='/login'>Login now</LinkAnchor> </Typography>
             </BoxDiv>
