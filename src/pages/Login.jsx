@@ -39,7 +39,7 @@ const Login = () => {
                     </FormControl>
                     {errors.password && <Alert severity="error">{errors.password.message}</Alert>}
                     {/*{errors.password && enqueueSnackbar(errors.password.message, { variant: 'error' })}*/}
-                    <ButtonSignup  sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
+                    <ButtonSignup disabled={Object.keys(errors).length > 0}  sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
                 </Form>
                 <Typography sx={{fontSize: '16px', fontWeight: '700', marginTop: '10px'}} >Don't have an account? <LinkAnchor to='/signup'>Signup</LinkAnchor> </Typography>
             </BoxDiv>

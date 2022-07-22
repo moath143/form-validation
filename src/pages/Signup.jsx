@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Body, BoxDiv, Form, ButtonSignup, LinkAnchor} from './styleSignup'
 import { FormControl, Input, InputLabel, Typography, Alert, Snackbar     } from '@mui/material'
 import {useForm, Controller} from 'react-hook-form'
@@ -66,7 +66,7 @@ const Signup = () => {
                     </FormControl>
                     {errors.confirmPassword && <Alert severity="error">{errors.confirmPassword.message}</Alert>}
                     {/*{errors.confirmPassword && enqueueSnackbar(errors.confirmPassword.message, { variant: 'error' })}*/}
-                    <ButtonSignup  sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
+                    <ButtonSignup disabled={Object.keys(errors).length > 0}  sx={{width: '60%'}} type="submit">Submit</ButtonSignup>
                 </Form>
                 <Typography sx={{fontSize: '16px', fontWeight: '700', marginTop: '10px'}} >Already have an account? <LinkAnchor to='/login'>Login now</LinkAnchor> </Typography>
             </BoxDiv>
