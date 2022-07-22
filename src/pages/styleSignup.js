@@ -44,3 +44,14 @@ export const LinkAnchor = styled(Link)`
   text-decoration: none;
   color: #7d2ae8;
 `
+
+export const Image = styled.div`
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+`
