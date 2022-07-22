@@ -4,12 +4,12 @@ import {Link} from 'react-router-dom'
 
 export const Body = styled.div`
   background: #7D2AE8;
-  width: 100vw;
-  height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
+  min-height: 100vh;
 `
 
 export const BoxDiv = styled(Box)`
@@ -28,7 +28,6 @@ export const Form = styled.form`
  
   .MuiFormControl-root {
     width: 60%;
-    margin: 5px 0;
   }
 `
 
