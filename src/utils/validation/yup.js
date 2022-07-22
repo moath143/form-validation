@@ -9,3 +9,9 @@ export const registerValidationSchema  = yup.object().shape({
     confirmPassword: yup.string().oneOf([yup.ref('password')], 'passwords must match').required(),
 
 }).required()
+
+export const LoginValidationSchema  = yup.object().shape({
+    email: yup.string().email('this field must be an email').required('Email is required').trim(),
+    password: yup.string().min(6, 'must be more than 6 characters').required('Password is required'),
+
+}).required()
